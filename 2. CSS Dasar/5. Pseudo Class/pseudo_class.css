@@ -1,0 +1,45 @@
+.hello:link {
+    color: orange;
+}
+
+.hello:hover {
+    color: green;
+    font-family: arial;
+    font-size: 20px;
+}
+
+.hello:active {
+    font-style: italic;
+}
+
+.hello:visited {
+    color: red;
+}
+
+li:first-child a{
+    color: green;
+}
+
+li:last-child a:last-child {
+    color: red;
+}
+
+li:nth-child(10) a:nth-child(2) {
+    color: yellow;
+}
+
+li:nth-child(3n-2) a {
+    color: green;
+}
+
+li:nth-child(odd) a:hover {
+    color: red;
+}
+
+p:first-of-type {
+    color: red;
+}
+
+p:last-of-type {
+    font-size: 50px;
+}

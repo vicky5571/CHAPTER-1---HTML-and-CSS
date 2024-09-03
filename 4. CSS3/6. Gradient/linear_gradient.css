@@ -1,0 +1,6 @@
+.kotak {
+    width: 600px;
+    height: 400px;
+    margin: 40px auto;
+    background-image: linear-gradient(to bottom right, lightcoral 63%, lightskyblue 80%);
+}

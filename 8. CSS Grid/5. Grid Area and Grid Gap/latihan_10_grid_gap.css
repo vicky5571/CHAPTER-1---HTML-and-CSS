@@ -1,0 +1,44 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #ddd;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* column-gap: 5px;
+    row-gap: 5px; */
+    gap: 10px;
+}
+
+
+
+.item {
+    width: 100%;
+    background-color: lightskyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    box-sizing: border-box;
+}
+
+.item:nth-child(even) {
+    background-color: lightsalmon;
+}
+
+
+
+/* Responsive Breakpoint */
+@media screen and (min-width: 576px) {
+    .container {
+        grid-template-areas: 
+        'header header header'
+        'sidebar content content'
+        'sidebar content content'
+        'footer footer footer';
+    }
+}

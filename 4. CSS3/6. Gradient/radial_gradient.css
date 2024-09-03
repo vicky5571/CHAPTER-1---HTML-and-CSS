@@ -1,0 +1,6 @@
+.kotak {
+    width: 600px;
+    height: 400px;
+    margin: 40px auto;
+    background-image: radial-gradient(circle farthest-corner at top left, lightcoral, lightskyblue);
+}

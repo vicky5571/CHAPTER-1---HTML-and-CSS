@@ -1,0 +1,181 @@
+/* RESET LINE 1-50 */
+/* CLEAR FLOAT LINE 52-77*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+ .cf:before,
+ .cf:after {
+     content: " "; /* 1 */
+     display: table; /* 2 */
+ }
+ 
+ .cf:after {
+     clear: both;
+ }
+ 
+ /**
+  * For IE 6/7 only
+  * Include this rule to trigger hasLayout and contain floats.
+  */
+ .cf {
+     *zoom: 1;
+ }
+
+
+/* MY CSS */
+body {
+    font: 16px/28px arial, sans-serif;
+    background-color: rgb(211, 211, 211);
+    background-image: url(img/moroccan-flower.png);
+}
+
+h1 {
+    font-size: 80px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 15px;
+}
+
+a {
+    color: salmon;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+
+
+.header {
+    padding: 30px;
+    
+}
+
+.header ul li {
+    margin-top: 50px;
+    display: inline-block;
+}
+
+.header a {
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 20px;
+    color: salmon;
+}
+
+a:hover {
+    color: aliceblue;
+    background-color: rgb(24, 233, 233);
+}
+
+.hero {
+    background-image: url(img/background.jpg);
+    height: 250px;
+    background-size: cover;
+    border-top: 7px solid salmon;
+    border-bottom: 7px solid lightskyblue;
+}
+
+.knp {
+    padding: 20px;
+}
+
+.konten {
+    width: 600px;
+    float: left;
+    box-sizing: border-box;
+}
+
+.keterangan {
+    margin-top: 10px;
+}
+
+.profil {
+    width: 300px;
+    float: right;
+}
+
+.foto-profil {
+    width: 130px;
+    float: left;
+    margin: 5px;
+}
+
+.footer {
+    background-color: black;
+    width: 960px;
+}
+
+.teks-footer {
+    font-size: 17px;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}

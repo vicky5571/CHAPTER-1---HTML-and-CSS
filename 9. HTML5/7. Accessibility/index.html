@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello Vicky!</h1>
+    <label>
+        Nama :
+        <input type="text" name="nama">
+    </label>
+
+    <label for="jurusan">Jurusan :</label>
+    <select name="jurusan" id="jurusan">
+        <option value="if">Teknik Informatika</option>
+        <option value="ti">Teknik Industri</option>
+    </select>
+
+    <button style="margin-bottom: 20px;" onclick="alert('tombol asli')">Kirim!</button>
+
+    <div tabindex="0" onclick="showAlert('halo')" id="button1" role="button">Tombol 1</div>
+    <div>Tombol 2</div>
+
+<script>
+    const showAlert = (text) => alert(text);
+    const button1 = document.querySelector('#button1');
+    button1.addEventListener('keyup', function(e) {
+        if(e.keyCode == 32 || e.keyCode == 13) {
+            showAlert('halo');
+        }
+    })
+</script>
+</body>
+</html>

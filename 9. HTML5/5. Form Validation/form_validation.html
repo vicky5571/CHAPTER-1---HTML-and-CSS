@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            width: 600px;
+            padding: 20px;
+        }
+
+        form div {
+            margin: 10px;
+        }
+
+        label {
+            display: block;
+        }
+
+        input:invalid,
+        input:required:invalid {
+            border: none;
+            outline: 2px solid red;
+            border-radius: 2px;
+        }
+
+        input:valid,
+        input:required {
+            border: 1px solid black;
+            outline: inherit;
+            border-radius: inherit;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="POST" autocomplete="off">
+        <div>
+            <label for="nama">Masukkan nama : </label>
+            <input type="text" name="nama" id="nama" autofocus required
+            minlength="2" maxlength="5"
+            oninvalid="this.setCustomValidity('ini harus diisi!')"
+            oninput="this.setCustomValidity('')">
+        </div>
+
+        <div>
+            <label for="email">Masukkan email : </label>
+            <input type="email" name="email" id="email">
+        </div>
+
+        <div>
+            <label for="nohp">Masukkan nohp : </label>
+            <input type="tel" name="nohp" id="nohp">
+        </div>
+
+        <div>
+            <label for="website">Masukkan URL website : </label>
+            <input type="url" name="website" id="website">
+        </div>
+
+        <div>
+            <label for="angka">Masukkan angka : </label>
+            <input type="number" name="angka" id="angka"
+            min="10" max="100" step="4">
+        </div>
+        
+        <div>
+            <label for="slider">Masukkan angka : </label>
+
+            <span class="awal"></span>
+            <input type="range" name="slider" id="slider" min="0" max="100" step="4">
+            <span class="akhir"></span>
+        </div>
+
+        <div>
+            <label for="tanggal">Masukkan tanggal : </label>
+            <input type="time" name="tanggal" id="tanggal">
+        </div>
+
+        <div>
+            <label for="warna">Masukkan warna : </label>
+            <input type="color" name="warna" id="warna">
+            <span class="hexa"></span>
+        </div>
+
+        <div>
+            <label for="kodepos">Masukkan kodepos : </label>
+            <input type="text" name="kodepos" id="kodepos"
+            pattern="^([1-9])[0-9]{4}$">
+            <!-- Cara baca Regular Expression -->
+            <!-- 
+                Angka pertama harus antara 1 sampai 9
+                Angka kedua harus antara 0 sampai 9
+                Diulang sebanyak 4 kali (yang diulang hanya [0-9])
+                JADI totalnya harus 4 digit
+             -->
+        </div>
+
+        <div>
+            <label for="nohp">Masukkan nohp : </label>
+            <input type="tel" name="nohp" id="nohp"
+            pattern="(\+62|62|0)8[1-9][0-9]{6,9}$">
+            <!-- 
+                Contoh yang valid
+                
+                +6282345623
+                082345623
+             -->
+            <!-- 
+                Cara Baca
+                
+                digit pertama harus antara +62 / 62 / 0 (ini akan dihitung 1 digit saja)
+                digit kedua harus 8
+                digit ketiga harus antara 1 sampai 9
+
+                digit keempat harus antara 0 sampai 9
+                untuk ekspresi digit keempat harus diulang 6 sampai 9 kali
+
+                JADI TOTALNYA 9 sampai 12 DIGIT
+              -->
+        </div>
+
+        <div>
+            <button type="submit">Kirim!</button>
+        </div>
+    </form>
+
+    <script>
+        const slider = document.querySelector('#slider');
+        const awal = document.querySelector('.awal');
+        const akhir = document.querySelector('.akhir');
+
+        // Berikan event saat slider digeser
+        awal.innerHTML = slider.min;
+        akhir.innerHTML = slider.value
+        slider.addEventListener('input', function () {
+            akhir.innerHTML = slider.value;
+        })
+
+
+        // UNTUK WARNA
+        const warna = document.querySelector('#warna');
+        const hexa = document.querySelector('.hexa');
+
+        hexa.innerHTML = warna.value;
+        warna.addEventListener('input', function () {
+            hexa.innerHTML = warna.value;
+
+            // Agar warna font juga ikut berubah sesuai yang di pick
+            hexa.style.color = warna.value;
+        })
+        
+    </script>
+</body>
+</html>
